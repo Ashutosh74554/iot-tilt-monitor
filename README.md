@@ -17,5 +17,5 @@ Determining tilt angle of a 2-wheeler vehicle using MPU6050 sensor with Raspberr
 - Micropython
 
 ## Modules
-- imu.py
-- vector3d.py
+- mpu6050.py
+- BlynkLib.py
