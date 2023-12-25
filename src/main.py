@@ -72,12 +72,10 @@ while True:
     print("Gyroscope: X: {:.2f}, Y: {:.2f}, Z: {:.2f} °/s".format(data['gyro']['x'], data['gyro']['y'], data['gyro']['z']))
     
     # Send sensor data to Blynk
-    blynk.virtual_write(0, (data['accel']['y']))     # virtual pin 0 for acceleration
-    blynk.virtual_write(3, tilt_x)   # virtual pin 1 for Tilt angles X-axis
-    blynk.virtual_write(4, tilt_y)   # virtual pin 2 for Tilt angles Y-axis
-    blynk.virtual_write(1, tilt_z)   # virtual pin 3 for Tilt angles Z-axis
-
+    blynk.virtual_write(0, (data['accel']['y']))     # virtual pin for acceleration
+    blynk.virtual_write(3, tilt_x)   # virtual pin for Tilt angles X-axis
+    blynk.virtual_write(4, tilt_y)   # virtual pin for Tilt angles Y-axis
+    blynk.virtual_write(1, tilt_z)   # virtual pin for Tilt angles Z-axis
     blynk.run()
-    # Delay for 1 seconds
-    utime.sleep(1)
 
+    utime.sleep(1)
