@@ -10,13 +10,13 @@ init_mpu6050(i2c)
 buzzer = machine.Pin(15, machine.Pin.OUT)
 
 # WiFi credentials
-WIFI_SSID = "jiofib2.4"
-WIFI_PASSWORD = "7382640067"
+WIFI_SSID = "AshutoshYashpal"
+WIFI_PASSWORD = "iotproject"
  
 # Blynk authentication token
 BLYNK_AUTH = "kbKxwNQOhOZTRhze-ONjWMGsuBqOhM_R"
  
- 
+
 # Connect to WiFi network
 wifi = network.WLAN(network.STA_IF)
 wifi.active(True)
@@ -24,7 +24,7 @@ wifi.connect(WIFI_SSID, WIFI_PASSWORD)
  
 # Wait for the connection to be established
 while not wifi.isconnected():
-    sleep(1)
+    utime.sleep_ms(1)
  
 # Initialize Blynk
 blynk = BlynkLib.Blynk(BLYNK_AUTH)
